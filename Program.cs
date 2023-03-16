@@ -106,9 +106,9 @@ namespace BT_canhan
             Console.OutputEncoding = Encoding.UTF8;
             VolunteerManager volunteerManager = new VolunteerManager();
             // Thêm các chiến dịch vào hệ thống
-            Campaign campaign1 = new Campaign("C001", "Chiến dịch 1");
-            Campaign campaign2 = new Campaign("C002", "Chiến dịch 2");
-            Campaign campaign3 = new Campaign("C003", "Chiến dịch 3");
+            Campaign campaign1 = new Campaign("C001", "Chiến dịch 1: Hỗ trợ người già neo đơn");
+            Campaign campaign2 = new Campaign("C002", "Chiến dịch 2: Phân phát quà cho trẻ em mồ côi có thành tích học tập tốt");
+            Campaign campaign3 = new Campaign("C003", "Chiến dịch 3: Góp quỹ cho trẻ em khuyết tật ");
             volunteerManager.AddCampaign(campaign1);
             volunteerManager.AddCampaign(campaign2);
             volunteerManager.AddCampaign(campaign3);
@@ -129,7 +129,7 @@ namespace BT_canhan
             volunteer3.totalCampaigns = 3;
             volunteer4.totalCampaigns = 2;
 
-            // Các sinh viên có số lượng chiến dịch nhiều nhất
+            // sinh viên có số lượng chiến dịch nhiều nhất
             List<Volunteer> topVolunteers = volunteerManager.GetTopVolunteers();
             Console.WriteLine("Top volunteers:");
             foreach (Volunteer volunteer in topVolunteers)
@@ -139,7 +139,7 @@ namespace BT_canhan
 
             // Các chiến dịch có số lượng sinh viên tham gia nhiều nhất
             List<Campaign> topCampaigns = volunteerManager.GetTopCampaigns();
-            Console.WriteLine("Top campaigns:");
+            Console.WriteLine("Top campaigns: ");
             foreach (Campaign campaign in topCampaigns)
             {
                 Console.WriteLine(campaign.campaignName);
